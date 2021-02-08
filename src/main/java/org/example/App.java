@@ -20,7 +20,7 @@ public class App {
     }
 
     public static List<String> write(File destination, List<String> src) {
-        try (BufferedWriter writer = new BufferedWriter(new File(destination))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(destination))) {
             for (String toWrite : src) {
                 writer.write(toWrite);
                 writer.newLine();
